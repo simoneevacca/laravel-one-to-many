@@ -58,6 +58,7 @@
                     <div class="card-body">
                         <h1 class="card-title">{{ $project->project_name }}</h1>
                         <p><strong>Descrizione: </strong>{{ $project->description }}</p>
+                        <p><strong>Tipo:</strong> {{ $project->type->type_name }}</p>
                         <p><a href="{{ $project->link_view }}">Link view</a></p>
                         <p><a href="{{ $project->link_code }}">Link code</a></p>
                     </div>
