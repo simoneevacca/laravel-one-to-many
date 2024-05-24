@@ -39,7 +39,7 @@ class TypeController extends Controller
         $val_data['slug'] = $slug;
         // dd($val_data);
         Type::create($val_data);
-        return to_route('admin.types.index');
+        return to_route('admin.types.index')->with('message', "New Type created!");
     }
 
     /**
@@ -66,7 +66,7 @@ class TypeController extends Controller
         $val_data = $request->validated();
         $type->update($val_data);
 
-        return to_route('admin.types.index');
+        return to_route('admin.types.index')->with('message', "$type->type_name has been updated!");
 
     }
 
@@ -76,6 +76,6 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         $type->delete();
-        return to_route('admin.types.index', $type);
+        return to_route('admin.types.index', $type)->with('message', "$type->type_name has been deleted!");
     }
 }

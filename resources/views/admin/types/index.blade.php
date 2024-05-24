@@ -6,9 +6,9 @@
 
         <div class="table-responsive">
 
-            @include('admin.partials.error-message')
+            @include('admin.partials.alert-message')
 
-            <table class="table table-primary">
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>

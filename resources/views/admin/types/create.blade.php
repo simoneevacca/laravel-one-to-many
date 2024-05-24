@@ -2,8 +2,10 @@
 
 @section('content')
     <div class="container">
+        <a class="btn btn-secondary" href="{{ route('admin.types.index') }}">BACK</a>
         @include('admin.partials.validation-errors')
-        <form action="{{ route('admin.types.store') }}" method="post">
+
+        <form class="py-4" action="{{ route('admin.types.store') }}" method="post">
             @csrf
 
             <div class="mb-3">
