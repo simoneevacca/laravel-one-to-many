@@ -59,7 +59,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body text-dark">Attention! You are deleting this character,
+                                            <div class="modal-body text-dark">Attention! You are deleting this project,
                                                 this action
                                                 irreversible. Do you want to continue?</div>
                                             <div class="modal-footer">
