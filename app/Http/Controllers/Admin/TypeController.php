@@ -6,6 +6,7 @@ use App\Models\Type;
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Str;
 
 
@@ -33,11 +34,11 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
-        $data = $request->all();
+        $val_data = $request->validated();
         $slug = Str::slug($request->type_name, '-');
-        $data['slug'] = $slug;
-        // dd($data);
-        Type::create($data);
+        $val_data['slug'] = $slug;
+        // dd($val_data);
+        Type::create($val_data);
         return to_route('admin.types.index');
     }
 
@@ -62,8 +63,8 @@ class TypeController extends Controller
      */
     public function update(UpdateTypeRequest $request, Type $type)
     {
-        $data = $request->all();
-        $type->update($data);
+        $val_data = $request->validated();
+        $type->update($val_data);
 
         return to_route('admin.types.index');
 

@@ -4,11 +4,9 @@
     <div class="container projects-index">
         <a href="{{ route('admin.projects.create') }}" class="btn btn-primary my-4">Add new project</a>
         <div class="table-responsive ">
-            @if (session('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
+            
+            @include('admin.partials.error-message')
+
             <table class="table table-dark">
                 <thead>
                     <tr>

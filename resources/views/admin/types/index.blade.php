@@ -5,6 +5,9 @@
         <a href="{{ route('admin.types.create') }}" class="btn btn-primary my-4">Add new project</a>
 
         <div class="table-responsive">
+
+            @include('admin.partials.error-message')
+
             <table class="table table-primary">
                 <thead>
                     <tr>

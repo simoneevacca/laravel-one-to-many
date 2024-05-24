@@ -105,6 +105,6 @@ class ProjectController extends Controller
             Storage::delete($project->preview_image);
         }
         $project->delete();
-        return to_route('admin.projects.index', $project)->with('message', "$project->project_name has been deleted");
+        return to_route('admin.projects.index')->with('message', "$project->project_name has been deleted");
     }
 }
